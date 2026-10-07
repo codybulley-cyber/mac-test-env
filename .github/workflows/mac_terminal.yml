@@ -1,1 +1,9 @@
+name: Free Interactive macOS Terminal
+on: workflow_dispatch # Allows you to manually trigger it with a button
 
+jobs:
+  interactive-terminal:
+    runs-on: macos-latest # Tells GitHub to give you a Mac server
+    steps:
+      - name: Initialize SSH Session
+        uses: mxschmitt/action-tmate@v3 # The tool that creates the tunnel
